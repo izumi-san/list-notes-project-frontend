@@ -4,24 +4,30 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import NewNota from './NewNota';
 import { useState } from 'react';
-import {v1 as uuid} from 'uuid';
+import { v1 as uuid } from 'uuid';
+
+interface nota {
+  id: string;
+  title: string;
+  text: string;
+}
 
 function App() {
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
 
-  const noteList = [];
+  const [noteList, setNoteList] = useState<nota[]>([]);
 
   const createNewNote = () => {
     const newNote = {
       id: uuid(),
       title,
-      text
-    }
-    noteList.push(newNote);
+      text,
+    };
+    setNoteList([...noteList, newNote]);
     setText('');
     setTitle('');
-  }
+  };
 
   return (
     <BrowserRouter>
@@ -52,7 +58,7 @@ function App() {
             />
           }
         />
-        <Route path='/' element={<HomePage />} />
+        <Route path='/' element={<HomePage noteList={noteList}/>} />
       </Routes>
     </BrowserRouter>
   );
