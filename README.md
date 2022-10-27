@@ -1,3 +1,24 @@
+# Olar
+
+Estou desenvolvendo este projeto para praticar React e Typescript. Pretendo fazer a integração com o backend, outro projeto em contrução, usando axios.
+Caso vc tenha ideias de pontos de melhorias ou dicas fica a vontade pra me chamar no [linkedin](https://www.linkedin.com/in/cassio-takeshi-izumi/).
+
+## Live Demo
+
+Esse projeto está no ar [aqui](https://izumi-san.github.io/list-notes-project-frontend/) em uma versão pré-alpha.
+Irei incrementando o projeto de forma constante. **Slow and Steady!**
+
+## Pontos que faltam serem concluídos, não necessáriamente nessa ordem.
+
+- [ ] Estilização
+- [ ] Validação
+- [ ] Testes
+- [ ] Adicionar axios
+- [ ] Organizar routes
+- [ ] Exibir feedbacks das ações
+- [ ] Deixar claro que a primeira página vai ser uma listagem
+- [ ] Checar se routes tá funcionando certo
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
