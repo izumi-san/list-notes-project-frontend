@@ -1,8 +1,8 @@
 {
-  "name": "project-frontend-list-note",
+  "name": "list-note",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://izumi-san.github.io/list-notes-project-frontend",
+  "homepage": "http://izumi-san.github.io/list-notes",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
