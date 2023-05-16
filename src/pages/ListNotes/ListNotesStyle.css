@@ -1,0 +1,11 @@
+.list-notes {
+    border-radius: 5px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin-inline: auto;
+    padding: 1rem;
+}

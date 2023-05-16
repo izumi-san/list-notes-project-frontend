@@ -1,6 +1,9 @@
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import NewNoteModal from "./components/NewNoteModal";
+import "./../pagesStyle.css";
+import "./ListNotesStyle.css";
+
 
 const ListNotes = () => {
   const [list, setList] = useState<{ title: string, note: string }[]>([]);
@@ -22,7 +25,7 @@ const ListNotes = () => {
   }
 
   const addNewNote = () => {
-    setList([...list, {title: newTitle, note: newNote}]);
+    setList([...list, { title: newTitle, note: newNote }]);
     setNewNote("");
     setNewTitle("");
   }
@@ -32,16 +35,18 @@ const ListNotes = () => {
     , []);
 
   return (
-    <>
-      <h2>Im the new landing page</h2>
-      <h5>There's no css in here :(</h5>
+    <div className="main-content">
+      <h2>Notes</h2>
+      <h5>Some mock notes to test interface</h5>
       <Button onClick={() => handleOpenModal()} />
-      {list.map((item) => (
-        <div>
-          <p>{item.title}</p>
-          <p>{item.note}</p>
-        </div>
-      ))}
+      <section className="list-notes">
+        {list.map((item) => (
+          <div>
+            <p>{item.title}</p>
+            <p>{item.note}</p>
+          </div>
+        ))}
+      </section>
       <NewNoteModal
         open={openModal}
         setOpen={setOpenModal}
@@ -51,7 +56,7 @@ const ListNotes = () => {
         setNote={setNewNote}
         addNewNote={addNewNote}
       />
-    </>
+    </div>
   );
 }
 

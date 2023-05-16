@@ -4,10 +4,10 @@ import RoutesReact from "./RoutesReact";
 function App() {
 
   return (
-    <>
-      APP
+    <div className='App'>
+      <h1 className='App-title'>Project Notes to remember</h1>
       <RoutesReact/>
-    </>
+    </div>
   );
 }
 

@@ -1,13 +1,12 @@
 .App{
   max-width: 1660px;
   min-width: 300px;
-  border-bottom: 0.5px solid;
-  padding-inline: 16px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  border-inline: solid 1px;
 }
 
-nav ul {
-  display: flex;
-  gap: 40px;
-  list-style-type: none;
-  padding: 0px;
+.App-title {
+  text-align: center;
+  margin-top: 0;
 }
