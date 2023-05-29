@@ -37,12 +37,12 @@ const ListNotes = () => {
   return (
     <div className="main-content">
       <h2>Notes</h2>
-      <h5>Some mock notes to test interface</h5>
+      <h4>Some mock notes to test interface</h4>
       <Button onClick={() => handleOpenModal()} />
       <section className="list-notes">
         {list.map((item) => (
-          <div>
-            <p>{item.title}</p>
+          <div className="list-notes-item">
+            <h5>{item.title}</h5>
             <p>{item.note}</p>
           </div>
         ))}

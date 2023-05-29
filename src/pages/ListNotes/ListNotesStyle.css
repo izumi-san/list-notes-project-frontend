@@ -2,10 +2,17 @@
     border-radius: 5px;
     border: 1px solid;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
     max-width: 1400px;
     margin-inline: auto;
     padding: 1rem;
+}
+
+.list-notes-item {
+    border-radius: 5px;
+    border: 1px solid;
+    min-height: 150px;
+    min-width: 250px;
+    padding-inline: 0.5rem;
 }
