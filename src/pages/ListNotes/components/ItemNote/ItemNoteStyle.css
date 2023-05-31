@@ -1,0 +1,14 @@
+.list-notes-item {
+    border-radius: 5px;
+    border: 1px solid;
+    min-height: 150px;
+    min-width: 250px;
+    padding-inline: 1rem;
+    background-color: #3e4553;
+    box-sizing: border-box;
+}
+
+.list-notes-item__title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}

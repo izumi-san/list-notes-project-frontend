@@ -4,15 +4,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 1400px;
+    max-width: 1280px;
     margin-inline: auto;
     padding: 1rem;
-}
-
-.list-notes-item {
-    border-radius: 5px;
-    border: 1px solid;
-    min-height: 150px;
-    min-width: 250px;
-    padding-inline: 0.5rem;
+    justify-content: space-around;
 }

@@ -1,10 +1,11 @@
-.App{
-  max-width: 1660px;
+.App {
+  max-width: 1360px;
   min-width: 300px;
   margin-inline: auto;
-  padding-inline: 1rem;
-  border-inline: solid 1px;
-  height: 100vh;
+  padding: 1rem;
+  border: solid 1px;
+  min-height: 100vh;
+  color: #fefefe;
 }
 
 .App-title {

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import NewNoteModal from "./components/NewNoteModal";
 import "./../pagesStyle.css";
 import "./ListNotesStyle.css";
+import ItemNote from "./components/ItemNote";
 
 
 const ListNotes = () => {
@@ -40,11 +41,8 @@ const ListNotes = () => {
       <h4>Some mock notes to test interface</h4>
       <Button onClick={() => handleOpenModal()} />
       <section className="list-notes">
-        {list.map((item) => (
-          <div className="list-notes-item">
-            <h5>{item.title}</h5>
-            <p>{item.note}</p>
-          </div>
+        {list.map(({title, note}) => (
+          <ItemNote title={title} note={note}/>
         ))}
       </section>
       <NewNoteModal
