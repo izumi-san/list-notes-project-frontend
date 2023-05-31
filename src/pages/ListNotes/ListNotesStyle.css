@@ -1,6 +1,5 @@
 .list-notes {
     border-radius: 5px;
-    border: 1px solid;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;

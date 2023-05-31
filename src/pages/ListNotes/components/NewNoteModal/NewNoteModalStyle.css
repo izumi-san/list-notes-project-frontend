@@ -1,5 +1,42 @@
-.btn-note-modal {
+.note-modal__btn {
     border-radius: 20px !important;
     background-color: #ff7360 !important;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+}
+
+.modal-note {
+    background-color: #4B374B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    border: 2px solid #000;
+    color: #fefefe;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 250px;
+}
+
+.note-modal__title {
+    text-align: center;
+}
+
+.note-modal__textfield {
+    background-color: #fefefe;
+    border-radius: 4px;
+}
+
+.note-modal__textarea {
+  padding: 0.5rem;
+  font-style: 'roboto';
+}
+
+.note-modal__btn-submit {
+    background-color: #ff7360 !important;
+    max-width: 200px;
+    margin-inline: auto !important;
 }

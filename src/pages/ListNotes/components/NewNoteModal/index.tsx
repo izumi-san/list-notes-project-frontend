@@ -11,11 +11,13 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
+  maxWidth: 400,
+  bgcolor: '#4B374B',
   border: '2px solid #000',
-  boxShadow: 24,
+  boxShadow: "24px #fefefe",
   p: 4,
+  color: "#fefefe",
+  borderRadius: "20px",
 };
 
 const NewNoteModal = (props: { 
@@ -41,27 +43,33 @@ const NewNoteModal = (props: {
 
   return (
     <div>
-      <Button className='btn-note-modal' variant="contained" onClick={handleOpen}>New note</Button>
+      <Button className='note-modal__btn' variant="contained" onClick={handleOpen}>New note</Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Nova Nota
+        <Box className="modal-note">
+          <Typography id="modal-modal-title" className='note-modal__title' variant="h5" component="h2">
+            NEW NOTE
           </Typography>
-          <TextField label={"Título"} value={title} onChange={(e)=>setTitle(e.target.value)} />
+          <TextField 
+            placeholder='Title'
+            value={title} 
+            onChange={(e)=>setTitle(e.target.value)}
+            className={"note-modal__textfield"} 
+            />
           <textarea
+            className='note-modal__textarea'
             rows={5}
             //cols={10}
             aria-label="maximum height"
-            placeholder="Maximum 4 rows" 
+            placeholder="Write your note,please!" 
             value={note}
             onChange={(e)=>setNote(e.target.value)}
           />
-          <Button onClick={()=>addNewNote()} >Adicionar</Button>
+          <Button className='note-modal__btn-submit' variant='contained' onClick={()=>addNewNote()} >ADD NOTE </Button>
         </Box>
       </Modal>
     </div>
