@@ -39,12 +39,6 @@ const ListNotes = () => {
     <div className="main-content">
       <h2>Notes</h2>
       <h4>Some mock notes to test interface</h4>
-      <Button onClick={() => handleOpenModal()} />
-      <section className="list-notes">
-        {list.map(({title, note}) => (
-          <ItemNote title={title} note={note}/>
-        ))}
-      </section>
       <NewNoteModal
         open={openModal}
         setOpen={setOpenModal}
@@ -54,6 +48,11 @@ const ListNotes = () => {
         setNote={setNewNote}
         addNewNote={addNewNote}
       />
+      <section className="list-notes">
+        {list.map(({title, note}) => (
+          <ItemNote title={title} note={note}/>
+        ))}
+      </section>
     </div>
   );
 }

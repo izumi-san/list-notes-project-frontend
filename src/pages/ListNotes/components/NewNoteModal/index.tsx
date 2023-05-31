@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { TextField } from '@mui/material';
+import "./NewNoteModalStyle.css";
 
 const style = {
   position: 'absolute' as 'absolute',
@@ -40,7 +41,7 @@ const NewNoteModal = (props: {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button className='btn-note-modal' variant="contained" onClick={handleOpen}>New note</Button>
       <Modal
         open={open}
         onClose={handleClose}
