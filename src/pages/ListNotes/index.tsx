@@ -1,12 +1,11 @@
-import { Button } from "@mui/material";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import NewNoteModal from "./components/NewNoteModal";
 import "./../pagesStyle.css";
 import "./ListNotesStyle.css";
 import ItemNote from "./components/ItemNote";
 
 
-const ListNotes = () => {
+const ListNotes:FC = () => {
   const [list, setList] = useState<{ title: string, note: string }[]>([]);
   const [openModal, setOpenModal] = useState(false);
   const [newTitle, setNewTitle] = useState("");
@@ -21,10 +20,6 @@ const ListNotes = () => {
     ])
   }
 
-  const handleOpenModal = () => {
-    setOpenModal(true)
-  }
-
   const addNewNote = () => {
     setList([...list, { title: newTitle, note: newNote }]);
     setNewNote("");
@@ -37,7 +32,7 @@ const ListNotes = () => {
 
   return (
     <div className="main-content">
-      <h2>Notes</h2>
+      <h2>Your Notes</h2>
       <h4>Some mock notes to test interface</h4>
       <NewNoteModal
         open={openModal}

@@ -1,10 +1,11 @@
+import { FC } from "react";
 import "./ItemNoteStyle.css"
-interface Item {
+interface ItemProps {
     title: string;
     note: string;
 }
 
-const ItemNote = (props:Item) => {
+const ItemNote:FC<ItemProps> = (props) => {
     const {title, note} = props;
     return (
         <div className="list-notes-item">

@@ -6,21 +6,7 @@ import Modal from '@mui/material/Modal';
 import { TextField } from '@mui/material';
 import "./NewNoteModalStyle.css";
 
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  maxWidth: 400,
-  bgcolor: '#4B374B',
-  border: '2px solid #000',
-  boxShadow: "24px #fefefe",
-  p: 4,
-  color: "#fefefe",
-  borderRadius: "20px",
-};
-
-const NewNoteModal = (props: { 
+interface modalProps { 
   open: boolean, 
   setOpen: React.Dispatch<React.SetStateAction<boolean>>,
   title: string, 
@@ -28,7 +14,9 @@ const NewNoteModal = (props: {
   note: string, 
   setNote: React.Dispatch<React.SetStateAction<string>>,
   addNewNote: () => void
-}) => {
+}
+
+const NewNoteModal:React.FC<modalProps> = (props) => {
   const { 
     open, 
     setOpen,
